@@ -150,6 +150,24 @@
             }
         }
 
+        public function custom_query($query, $data)
+        {
+            if (!is_array($data)) {
+                return;
+            } //Throw ERROR
+            if (!$this->is_assoc($data)) {
+                return;
+            } //THROW ERROR
+
+
+            return $this->connect->query($this->build_sanitize_query($query, $data));
+        }
+
+        public function known_custom_query($query)
+        {
+            return $this->connect->query($query);
+        }
+
         public function value_exists($table_name, $column_id, $column_value)
         {
             $table_name = $this->format_table_or_database_string($table_name);
