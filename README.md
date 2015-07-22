@@ -2,8 +2,10 @@
 MySQLDB is a lightweight MySQL database management library that keeps your project SQL Injection safe while reducing your lines of code. Every input put into this library is escaped to make sure you SQL database stays safe. You don't have to remember to use `mysqli_real_escape_string();` anymore this library handles that for you.
 ## Setup
 Include the MySQLDB.php into your project then your set!
-`include_once('MySQLDB.php');
-$database = new DB('localhost', 'root', 'password', 'heirteirDB');`
+```PHP
+include_once('MySQLDB.php');
+$database = new DB('localhost', 'root', 'password', 'heirteirDB');
+```
 
 ## Examples
 ### Create a table
