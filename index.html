@@ -27,9 +27,10 @@
 <h2>
 <a id="setup" class="anchor" href="#setup" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setup</h2>
 
-<p>Include the MySQLDB.php into your project then your set!
-<code>include_once('MySQLDB.php');
-$database = new DB('localhost', 'root', 'password', 'heirteirDB');</code></p>
+<p>Include the MySQLDB.php into your project then your set!</p>
+
+<div class="highlight highlight-PHP"><pre><span class="pl-s1"><span class="pl-k">include_once</span>(<span class="pl-s"><span class="pl-pds">'</span>MySQLDB.php<span class="pl-pds">'</span></span>);</span>
+<span class="pl-s1"><span class="pl-smi">$database</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">DB</span>(<span class="pl-s"><span class="pl-pds">'</span>localhost<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>root<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>password<span class="pl-pds">'</span></span>, <span class="pl-s"><span class="pl-pds">'</span>heirteirDB<span class="pl-pds">'</span></span>);</span></pre></div>
 
 <h2>
 <a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
@@ -37,17 +38,22 @@ $database = new DB('localhost', 'root', 'password', 'heirteirDB');</code></p>
 <h3>
 <a id="create-a-table" class="anchor" href="#create-a-table" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create a table</h3>
 
-<p><code>$db-&gt;create_table('heirteirtesting', array('userid VARCHAR(16)', 'username VARCHAR(24)', 'passwordhash VARCHAR(72)', 'email VARCHAR(80)'));</code></p>
+<div class="highlight highlight-PHP"><pre><span class="pl-s1">    <span class="pl-smi">$db</span><span class="pl-k">-&gt;</span>create_table(<span class="pl-s"><span class="pl-pds">'</span>heirteirtesting<span class="pl-pds">'</span></span>, <span class="pl-c1">array</span>(</span>
+<span class="pl-s1">        <span class="pl-s"><span class="pl-pds">'</span>userid VARCHAR(16)<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">        <span class="pl-s"><span class="pl-pds">'</span>username VARCHAR(24)<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">        <span class="pl-s"><span class="pl-pds">'</span>passwordhash VARCHAR(72)<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">        <span class="pl-s"><span class="pl-pds">'</span>email VARCHAR(80)<span class="pl-pds">'</span></span></span>
+<span class="pl-s1">    ));</span></pre></div>
 
 <h3>
 <a id="insert-a-new-row" class="anchor" href="#insert-a-new-row" aria-hidden="true"><span class="octicon octicon-link"></span></a>Insert a new row</h3>
 
-<p><code>$db-&gt;add_row('heirteirstring', array(
-        'userid' =&gt; 'aa89734',
-        'username' =&gt; 'Heirteir',
-        'password' =&gt; 'kfdjsakfj.jkjfdksjfd.j32432',
-        'email' =&gt; 'heirteir@github.com'
-    ));</code></p>
+<div class="highlight highlight-PHP"><pre><span class="pl-s1"><span class="pl-smi">$db</span><span class="pl-k">-&gt;</span>add_row(<span class="pl-s"><span class="pl-pds">'</span>heirteirstring<span class="pl-pds">'</span></span>, <span class="pl-c1">array</span>(</span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>userid<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">'</span>aa89734<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>username<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">'</span>Heirteir<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>password<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">'</span>kfdjsakfj.jkjfdksjfd.j32432<span class="pl-pds">'</span></span>,</span>
+<span class="pl-s1">    <span class="pl-s"><span class="pl-pds">'</span>email<span class="pl-pds">'</span></span> <span class="pl-k">=&gt;</span> <span class="pl-s"><span class="pl-pds">'</span>heirteir@github.com<span class="pl-pds">'</span></span></span>
+<span class="pl-s1">    ));</span></pre></div>
 
 <h3>
 <a id="grab-a-row" class="anchor" href="#grab-a-row" aria-hidden="true"><span class="octicon octicon-link"></span></a>Grab a row</h3>
